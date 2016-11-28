@@ -7,22 +7,31 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
+#import "SBPlayer.h"
 @interface ViewController ()
-
+@property (nonatomic,strong) SBPlayer *player;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.player=[[SBPlayer alloc]initWithUrl:[self url]];
+    //设置视频标题
+    [self.player setTitle:@"这是一个标题"];
+    [self.view addSubview:self.player];
+    [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.left.mas_equalTo(self.view);
+        make.height.mas_equalTo(@250);
+        make.center.mas_equalTo(self.view);
+    }];
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSURL *)url {
+    NSURL *url=[NSURL URLWithString:@"http://download.3g.joy.cn/video/236/60236937/1451280942752_hd.mp4"];
+    return url;
 }
 
 
