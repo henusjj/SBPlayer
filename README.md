@@ -1,6 +1,6 @@
 # SBPlayer
 ####基于AVPlayer封装的轻量级播放器,可以播放本地网络视频,易于定制
-#####SBPlayer结构简单,可以`横屏竖屏`,支持`M3u8、mp3、flv`等格式视频本地播放或者网络播放,通过masonry约束，适配各种尺寸iPhone。
+#####SBPlayer结构简单,可以`横屏竖屏`,支持`M3u8、mp4`等格式视频本地播放或者网络播放,通过masonry约束，适配各种尺寸iPhone。
 ![1](https://github.com/shibiao/SBPlayer/blob/master/Images/2.gif)
 ![2](https://github.com/shibiao/SBPlayer/blob/master/Images/3.gif)
 ![3](https://github.com/shibiao/SBPlayer/blob/master/Images/4.gif)
